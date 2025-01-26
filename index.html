@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zomate Food Delivery at your Doorstep </title>
+   <style>
+  
+    .progress{
+        background-color:black;
+        height:3px;
+        animation:load 1s ease-in-out 1;
+    }
+    *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+    }
+    @keyframes load{
+        0%{
+            width:0%;
+
+        }
+        50%{
+            width:90vw;
+        }
+        100%{
+            width:100vw;
+        }
+
+    }
+    /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #fdfdfd;
+}
+
+/* Header Styles */
+header {
+    background-color: #ff3d3d; /* Red theme color */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header b {
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    justify-content: center;
+}
+
+nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #ffe6e6;
+}
+
+/* Main Section Styles */
+main {
+    text-align: center;
+    margin: 3rem auto;
+    padding: 2rem;
+    height:78vh; 
+}
+
+main h1 {
+    font-size: 2.5rem;
+    color: #ff3d3d; /* Red theme color */
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1.2rem;
+    color: #555;
+}
+/* Search Bar Styles */
+.search-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 2px solid #ff3d3d; /* Matches the red theme color */
+    border-radius: 25px;
+    font-size: 1rem;
+    outline: none;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.search-bar input:focus {
+    box-shadow: 0 0 10px rgba(255, 61, 61, 0.5);
+}
+
+.search-bar button {
+    position: absolute;
+    right: 10px;
+    background-color: #ff3d3d;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.search-bar button:hover {
+    background-color: #e63030;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: #ff3d3d; /* Red theme color */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer small {
+    font-size: 0.9rem;
+    color: #ffe6e6;
+}
+@keyframes load{
+    0%{
+        width:0%;
+    }
+    50%{
+        width:90vw;
+    }
+    100%{
+        width:100vw;
+    }
+}
+ /* Bicycle Animation */
+ .bicycle-container {
+    position: relative;
+    height: 150px; /* Reserve space for the bicycle */
+    overflow: hidden;
+}
+
+.bicycle {
+    position: absolute;
+    top: 50%; /* Center vertically in the container */
+    left: -300px; /* Starts offscreen */
+    width: 200px; /* Size of the bicycle image */
+    transform: translateY(-50%);
+    animation: moveBicycle 5s linear infinite;
+}
+@keyframes moveBicycle {
+    0% {
+        left: -300px; /* Start offscreen */
+    }
+
+    100% {
+        left: 100vw; /* Move offscreen to the right */
+    }
+}
+   
+@keyframes slid1{
+    0%{
+        transform:translate(-8vw);
+    }
+    100%{
+        transform:translate(85vw);
+    }
+  }
+  @keyframes slid2{
+    0%{
+        transform:translate(0vw);
+    }
+    100%{
+        transform:translate(92vw);
+    }
+  }
+  @keyframes slid2{
+    0%{
+        transform:translate(0vw);
+    }
+    100%{
+        transform:translate(92vw);
+    }
+  }
+  .slider{
+    background-color:white;
+    height:223px;
+    overflow:hidden;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+
+  }
+  .imag1{
+    transform:translate(-8vw);
+    animation:slide1 1s 2s forward;
+  }
+  .imag2{
+    transform:translate(0vw);
+    animation:slide2 1s 2s forward;
+  }
+  .imag3{
+    transform:translate(8vw);
+  }
+/* Add a Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav a {
+        margin: 10px 0;
+    }
+
+    main h1 {
+        font-size: 2rem;
+    }
+}
+
+   </style>
+ 
+</head>
+<body>
+    <div class="progress"></div>    
+    <header>
+        <div>
+           <b> Zomato</b>
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search your favorite dishes..." aria-label="Search">
+            <button type="button">Search</button>
+        </div>
+        <nav>
+            <div>
+                <a href="/home.html">Home</a>
+                <a href="/About.html">About</a>
+                <a href="/Contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+     <!-- Bicycle Animation -->
+     <div class="bicycle-container">
+        <img class="bicycle" src="https://static.vecteezy.com/system/resources/previews/008/492/236/non_2x/delivery-cartoon-illustration-png.png" alt="Bicycle">
+    </div>
+    <main>
+       
+        <div>
+            <div class="slider">
+                <img  class="imag1" src="https://asset20.ckassets.com/blog/wp-content/uploads/sites/5/2019/12/Onion-Dosa.jpg" alt="" width="600px" height="300px">
+                <img class="imag2" src="https://www.opindia.com/wp-content/uploads/2024/08/zomato-bans-AI-image.jpg" alt="" width="600px" height="300px">
+                <img class="imag3" src="https://b.zmtcdn.com/data/pictures/2/111932/4b7fc9204e45579638777fc1b94810f5_featured_v2.jpg?fit=around|750:500&crop=750:500;*,*" alt="" width="600px" height="300px">
+            </div>
+            <h1>Order Your Favourite Food in Online</h1>
+        </div>
+       
+        
+    </main>
+    <footer>
+        copyright Zomato All rights reserved
+    </footer>
+</body>
+</html>
